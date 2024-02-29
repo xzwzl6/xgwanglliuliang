@@ -69,12 +69,12 @@ async function start(){
     maxtheard=document.getElementById("thread").value;
     testurl=document.getElementById("link").value;
     if(testurl.length<10){
-        alert("链接不合法")
+        alert("链接不正确")
         return;
     }
     testurl=testurl.substring(0,5).toLowerCase()+ testurl.substring(5, testurl.length);
     if(!checkURL(testurl)){
-        alert("链接不合法")
+        alert("链接不正确")
         return;
     }
     if(testurl.startsWith("http://")){
@@ -82,7 +82,7 @@ async function start(){
         return;
     }
     if(!testurl.startsWith("https://")){
-        alert("链接不合法")
+        alert("链接不正确")
         return;
     }
     document.getElementById('do').innerText='正在检验链接...';
